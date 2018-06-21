@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Youtube Video Downloader</title>
+  </head>
+  <body>
+
+        <div class="jumbotron jumbotron-fluid" style="padding: 2rem 2rem;">
+
+            <div class="container">
+                <p class="lead" style="text-align: center"><b style="font-weight: bold">Video Adı</b> : {{ ad }}</p>
+            </div>
+        </div>
+
+        <div class="container">
+             <div style="margin-left: 25%;">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+             </div>
+        </div>
+
+
+        <div class="container">
+
+            <form action="/download/" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 1%">
+
+                        <div class="input-group">
+                          <select class="custom-select" id="type" name="type">
+                            <option selected>İndirme Seçenekleri</option>
+                            <option value="music">Mp3</option>
+                            <option value="video">Videp</option>
+                          </select>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">İndir</button>
+                          </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+
+
+        </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
