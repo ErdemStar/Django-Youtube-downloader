@@ -32,12 +32,12 @@
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-md-12" style="margin-top: 1%">
+                        <h3 style="text-align: center">İndirme Seçenekleri</h3>
 
                         <div class="input-group">
                           <select class="custom-select" id="type" name="type">
-                            <option selected>İndirme Seçenekleri</option>
-                            <option value="music">Mp3</option>
-                            <option value="video">Videp</option>
+                            <option selected value="music">Mp3</option>
+                            <option value="video">Video</option>
                           </select>
                           <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="submit">İndir</button>
